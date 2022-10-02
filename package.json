@@ -1,6 +1,6 @@
 {
   "name": "threepackage",
-  "version": "1.0.4-a",
+  "version": "1.0.4-b",
   "description": "test npx template creator",
   "main": "index.js",
   "scripts": {
