@@ -61,7 +61,7 @@ async function setup() {
     await runCmd('npx rimraf ./.git');
 
     // fs.unlinkSync(path.join(appPath, 'LICENSE.MD'));
-    fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
+    // fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
     fs.unlinkSync(path.join(appPath, 'package.json'));
 
     buildPackageJson(packageJson, folderName);
