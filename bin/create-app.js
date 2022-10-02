@@ -30,7 +30,7 @@ if (process.argv.length < 3) {
 const ownPath = process.cwd();
 const folderName = process.argv[2];
 const appPath = path.join(ownPath, folderName);
-const repo = 'https://github.com/Leopold-V/react-parcel-app.git';
+const repo = 'https://github.com/FadParatlas/threejsmui.git';
 
 try {
   fs.mkdirSync(appPath);
@@ -103,13 +103,10 @@ function buildPackageJson(packageJson, folderName) {
     description: '',
     author: '',
     scripts: {
-      start:
-        'npm run clean && parcel serve public/index.html --dist-dir development -p 3000',
-      build:
-        'rimraf ./build && parcel build public/*.html --dist-dir build --public-url ./',
-      test: 'jest',
-      clean: 'rimraf ./development && rimraf ./.parcel-cache',
-      prettify: 'npx prettier --write ./src/',
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
     },
     devDependencies: {
       '@parcel/transformer-sass': '^2.0.0-beta.2',
@@ -124,15 +121,22 @@ function buildPackageJson(packageJson, folderName) {
       prettier: '2.2.1',
     },
     dependencies: {
-      babel: '^6.23.0',
-      'jest-styled-components': '^7.0.3',
-      'normalize.css': '^8.0.1',
-      'prop-types': '^15.7.2',
-      react: '^17.0.2',
-      'react-dom': '^17.0.2',
-      'react-router-dom': '^5.2.0',
-      rimraf: '^3.0.2',
-      'styled-components': '^5.2.3',
+      "@emotion/react": "^11.10.4",
+      "@emotion/styled": "^11.10.4",
+      "@mui/material": "^5.10.7",
+      "@react-three/drei": "^9.32.7",
+      "@react-three/fiber": "^8.8.7",
+      "@react-three/postprocessing": "^2.6.2",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "framer-motion": "^7.5.1",
+      "google-map-react": "^2.2.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-scripts": "5.0.1",
+      "three": "^0.145.0",
+      "web-vitals": "^2.1.4"
     },
     postcss: {
       plugins: {
