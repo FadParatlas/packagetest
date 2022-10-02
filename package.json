@@ -1,0 +1,21 @@
+{
+  "name": "threepackage",
+  "version": "1.0.0",
+  "description": "test npx template creator",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.js"
+  },
+  "bin": {
+    "create-boilerplate": "./generate-app.js"
+  },
+  "author": "fadPARATLAS",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
+}
